@@ -1,0 +1,78 @@
+'Adding a Label to the User Form
+Private Sub Label1_Click()
+
+End Sub
+
+------------------------------------------
+
+' Adding new worksheet to the workbook
+Private Sub btnAddWorksheet_Click()
+    
+    'Create  a variable tryAgain
+    Dim tryAgain As Integer
+    
+    ' If user leaves the box empty go to error handler section
+    On Error GoTo errHandler
+
+    ' Add new worksheet to the start of all worksheets instead of to the left of the clicked worksheet
+    Worksheets.Add Before:=Worksheets(1)
+    
+    ActiveSheet.Name = InputBox("Please enter a new worksheet name")
+    
+    ' if no error skip the errHandler
+    Exit Sub
+
+    
+errHandler:
+    
+    ' prompt user to try again
+    tryAgain = MsgBox("Invalid Worksheet name", vbYesNo)
+    
+    ' if the user picked yes
+    If tryAgain = 6 Then
+        're-run the procedure
+        btnAddWorksheet_Click
+    Else
+        ' turn off the alert of deleting the worksheet if the user selects no
+        Application.DisplayAlerts = False
+        
+        ' delete the invalid worksheet
+        ActiveSheet.Delete
+    End If
+
+End Sub
+
+--------------------------------------------------
+
+' Procedure to run the YearlyReport
+Private Sub btnRunReport_Click()
+    LoopYearlyReport
+End Sub
+
+-------------------------------------------------
+
+'Select values of the worksheet
+Private Sub cboWhichSheet_Change()
+    Worksheets(Me.cboWhichSheet.Value).Select
+End Sub
+
+----------------------------------------------
+
+'In UserForm add a MsgBox
+Private Sub UserForm_Click()
+    MsgBox ("Hello World!")
+End Sub
+
+----------------------------------------------------
+'Add all worksheets to Combo box
+Private Sub UserForm_Initialize()
+    Dim i As Integer
+    
+    i = 1
+    
+    Do While i <= Worksheets.Count
+        Me.cboWhichSheet.AddItem Worksheets(i).Name
+        i = i + 1
+        
+        Loop
+End Sub
