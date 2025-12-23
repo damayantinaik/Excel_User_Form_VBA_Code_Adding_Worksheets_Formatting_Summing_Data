@@ -16,11 +16,11 @@ The data file and the workbook with User Form along with VBA code can be found a
 
 
 
-The Macro VBA codes can be obtained at :
+The User Form and Macro VBA codes can be obtained at :
 
-https://github.com/damayantinaik/Excel_User_Form_VBA_Code_Adding_Worksheets_Formatting_Summing_Data/blob/main/User_Form_window.png
+[User Form Window](https://github.com/damayantinaik/Excel_User_Form_VBA_Code_Adding_Worksheets_Formatting_Summing_Data/blob/main/User_Form_window.png)
 
 
-https://github.com/damayantinaik/Excel_User_Form_VBA_Code_Adding_Worksheets_Formatting_Summing_Data/blob/main/VBA_Code_Macro_for_User_Form_adding_worksheets_and_naming_formatting_data.txt
+[Macros with VBA codes adding naming worksheets formatting and summing data](https://github.com/damayantinaik/Excel_User_Form_VBA_Code_Adding_Worksheets_Formatting_Summing_Data/blob/main/VBA_Code_Macro_for_User_Form_adding_worksheets_and_naming_formatting_data.txt)
 
 https://github.com/damayantinaik/Excel_User_Form_VBA_Code_Adding_Worksheets_Formatting_Summing_Data/blob/main/Macro_VBA_Code_for_Adding_Header_Formating_Data_to_Currency.txt
